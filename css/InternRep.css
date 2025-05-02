@@ -6,107 +6,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-  min-height: 100vh;
-  background: #0b0d15;
-  color: #a2a5b3;
-  align-content: center;
+    min-height: 100vh;
+    background: #DBDBDB;
+    color: black;
+    align-content: center;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     height: auto;
 }
-
-.container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Align items vertically (optional) */
-    gap: 20px; /* Space between the cards */
-    flex-wrap: wrap; /* Ensures responsiveness */
-    margin-top: 50px; /* Adjust as needed */
-}
-
-.card, .card2 {
-    padding: 2em;
-    width: 300px;
-    background: #1c1f2b;
-    text-align: center;
-    border-radius: 10px;
-    position: relative;
-}
-
-
-  @property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-  }
-  
-  .card::after, .card::before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 3px;
-    border-radius: 10px;
-    animation: 3s spin linear infinite;
-  }
-  .card::before{
-    filter: blur(1.5rem);
-    opacity: 0.5;
-  }
-  @keyframes spin{
-    from{
-      --angle: 0deg;
-    }
-    to{
-      --angle: 360deg;
-    }
-  }
-
-  
-  @property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-  }
-  
-  .card2::after, .card2::before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 3px;
-    border-radius: 10px;
-    animation: 3s spin linear infinite;
-  }
-  .card2::before{
-    filter: blur(1.5rem);
-    opacity: 0.5;
-  }
-  @keyframes spin{
-    from{
-      --angle: 0deg;
-    }
-    to{
-      --angle: 360deg;
-    }
-  }
-
-
-
-
-
-
 
 nav {
     position: sticky;
@@ -229,4 +137,49 @@ nav ul li a:hover {
 .btn:active {
     color: #000;
     font-weight: bold;
+}
+
+
+
+
+
+
+.report-container { 
+    width: 60%; 
+    margin: 40px auto; 
+    background: white; 
+    border-radius: 15px; 
+    padding: 20px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.report-container h2 { 
+    text-align: center; 
+}
+.report-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+}
+.report-table th, .report-table td { 
+    padding: 12px; 
+    text-align: center; 
+    border: 1px solid #ddd; 
+}
+.report-table th { 
+    background: linear-gradient(45deg, #74C69D, #40916C);
+    color: white; 
+}
+.status { 
+    font-weight: normal; 
+    padding: 5px; 
+    border-radius: 5px; 
+    display: inline-block; 
+    width: 100px; 
+}
+.status-present { 
+    color: green; 
+    background-color: #DFF0D8; 
+}
+.status-absent { 
+    color: red; 
+    background-color: #F2DEDE; 
 }

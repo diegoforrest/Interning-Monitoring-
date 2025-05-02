@@ -56,23 +56,22 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/CompanyLogin.css">
+    <link rel="stylesheet" href="css/CompanyLog.css">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Internship Monitoring System - Company Login</title>
 
 </head>
 <body>
     <div class="overlay"></div>
 
-    <div class="header">
-        <div class="logo-container">
-            <img src="image/favicon.png" alt="logo" />
-            <div class="logo">Internship Monitoring System</div>
-        </div>
-    </div>
 
     <div class="container">
         <div class="text">
-            <h1>Monitor</h1>
+        <h1>Monitor</h1>
             <p>Keep a close watch on intern progress report in real time</p>
             <h1>Track Hours</h1>
             <p>Accurate log rendered hours with ease</p>
@@ -83,7 +82,7 @@ $conn->close();
         <div class="registration">
             <h1 class="logintitle">Company Log In</h1>
             <form method="POST">
-                <label>Email:
+                <label style="margin-left: 39px;">Email:
                     <input type="email" id="email" name="email" required>
                 </label>
                 <label>Password:

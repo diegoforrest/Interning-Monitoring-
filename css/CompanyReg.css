@@ -2,11 +2,16 @@ body {
     background-image: url("../image/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
     text-align: center;
     background-position: center 20%;
+
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
 }
 .overlay {
     position: fixed;
@@ -19,11 +24,12 @@ body {
 }
 .container {
     max-width: 1000px;
-    background: rgba(0, 0, 0, 0.5);
+    width: 90%; /* Ensures it doesn't shrink too much */
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-radius: 40px;
     color: white;
-    margin: 80px auto;
+    text-align: center;
 }
 
 h1 {
@@ -36,18 +42,16 @@ h1 {
     gap: 15px 100px;
     text-align: left;
 }
-
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-
 .form-group label {
     font-size: 20px;
     margin-bottom: 5px;
 }
-.form-group input, .form-group select {
+.form-group input {
     width: 100%;
     padding: 10px;
     border-radius: 30px;
@@ -55,14 +59,13 @@ h1 {
     outline: none;
     font-size: 20px;
 }
-
 .full-width {
     grid-column: span 2;
     text-align: center;
 }
 .btn {
     width: 30%;
-    background: #218E17;
+    background: linear-gradient(45deg, #1B5E20, #8BC34A);
     color: white;
     padding: 10px;
     font-size: 25px;
@@ -71,21 +74,17 @@ h1 {
     cursor: pointer;
     margin-top: 30px;
 }
-
 .btn:hover {
-    background: darkgreen;
+    background: linear-gradient(45deg, #95DF7A, #5CAF50);
 }
-
 .login-link {
     margin-top: 10px;
     text-align: center;
 }
-
 .login-link a {
     color: lightblue;
     text-decoration: none;
 }
-
 .login-link a:hover {
     text-decoration: underline;
 }

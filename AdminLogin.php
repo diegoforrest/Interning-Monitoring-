@@ -36,7 +36,7 @@ if ($password === $row['password']) {
     $_SESSION['role'] = "admin"; // Store role in session
 
     // Redirect to dashboard
-    header("Location: AdminDashboard.php");
+    header("Location: AdminReports.php");
     exit();
 } else {
     echo "<script>alert('Incorrect password.');</script>";
@@ -61,20 +61,19 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/AdminLogin.css">
+    <link rel="stylesheet" href="css/AdminLog.css">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Internship Monitoring System</title>
 
 </head>
 <body>
+
+
     <div class="overlay"></div>
-
-    <div class="header">
-        <div class="logo-container">
-            <img src="image/favicon.png" alt="logo" />
-            <div class="logo">Internship Monitoring System</div>
-        </div>
-    </div>
-
     <div class="container">
         <div class="text">
             <h1>Monitor</h1>
@@ -94,7 +93,7 @@ $conn->close();
     <label>Password:
         <input type="password" id="password" name="password" required>
     </label>
-    <button type="submit" class="btn">Login</button>
+    <button type="submit" class="btn">Log In</button>
 </form>
 
             </div>

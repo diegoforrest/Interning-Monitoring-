@@ -77,7 +77,10 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/StudentRegister.css">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <link rel="stylesheet" href="css/StudentReg.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Internship Registration</title>
 
 </head>
@@ -85,7 +88,7 @@ $conn->close();
     <div class="overlay"></div>
 
     <div class="container">
-        <h1>Register As Intern</h1>
+        <h1 style="text-decoration: none; font-family: 'Robotolightnew', sans-serif;  color: white; font-weight: normal;">Register As Intern</h1>
 
         <form action="StudentRegister.php" method="POST" class="form-grid">
             <div class="form-group">
@@ -105,7 +108,7 @@ $conn->close();
 
             <div class="form-group">
                 <label>Company Name</label>
-                <select name="company_name" required>
+                <select name="company_name" required class="company-select">
                     <option value="">Select a company</option>
                     <?php
                     // Populate dropdown with company names from the database

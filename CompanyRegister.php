@@ -59,15 +59,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/CompanyRegister.css">
-    <title>Internship Registration</title>
+    <link rel="stylesheet" href="css/CompanyReg.css">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Company Registration</title>
 
 </head>
 <body>
     <div class="overlay"></div>
 
     <div class="container">
-        <h1>Register As Company</h1>
+        <h1 style="text-decoration: none; font-family: 'Robotolightnew', sans-serif;  color: white; font-weight: normal;">Register As Company</h1>
 
         <form action="CompanyRegister.php" method="POST" class="form-grid">
             <div class="form-group">
@@ -95,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </form>
 
-        <p class="login-link">Already have an account? <a href="StudentLogin.php">Login here</a></p>
+        <p class="login-link">Already have an account? <a href="CompanyLogin.php">Login here</a></p>
     </div>
 </body>
 </html>

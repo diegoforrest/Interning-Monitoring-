@@ -6,105 +6,47 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-  min-height: 100vh;
-  background: #0b0d15;
-  color: #a2a5b3;
-  align-content: center;
+    min-height: 100vh;
+    background: #DBDBDB;
+    color: black;
+    align-content: center;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     height: auto;
 }
 
+/* Rounded Containers */
 .container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Align items vertically (optional) */
-    gap: 20px; /* Space between the cards */
-    flex-wrap: wrap; /* Ensures responsiveness */
-    margin-top: 50px; /* Adjust as needed */
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
 }
 
 .card, .card2 {
-    padding: 2em;
-    width: 300px;
-    background: #1c1f2b;
+    width: 250px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
     text-align: center;
-    border-radius: 10px;
-    position: relative;
+    font-weight: normal;
 }
 
+.card {
+    background: linear-gradient(45deg, #F9C5C5, #E88D8D);
+}
 
-  @property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-  }
-  
-  .card::after, .card::before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 3px;
-    border-radius: 10px;
-    animation: 3s spin linear infinite;
-  }
-  .card::before{
-    filter: blur(1.5rem);
-    opacity: 0.5;
-  }
-  @keyframes spin{
-    from{
-      --angle: 0deg;
-    }
-    to{
-      --angle: 360deg;
-    }
-  }
-
-  
-  @property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-  }
-  
-  .card2::after, .card2::before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 3px;
-    border-radius: 10px;
-    animation: 3s spin linear infinite;
-  }
-  .card2::before{
-    filter: blur(1.5rem);
-    opacity: 0.5;
-  }
-  @keyframes spin{
-    from{
-      --angle: 0deg;
-    }
-    to{
-      --angle: 360deg;
-    }
-  }
-
-
-
-
+.card2 {
+    background: linear-gradient(45deg, #95DF7A, #5CAF50);
+}
 
 
 
@@ -228,5 +170,73 @@ nav ul li a:hover {
 
 .btn:active {
     color: #000;
+    font-weight: normal;
+}
+
+.company-container {
+    position: absolute;
+    width: 100%;
+    text-align: right; /* Aligns both elements to the right */
+}
+
+.company-name {
+    position: fixed; /* Change to fixed */
+    top: 45px;
+    right: 250px; /* Move more left */
+    margin-right: 50px;
+    font-size: 16px;
     font-weight: bold;
+    color: #333;
+    background: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Rounded Containers */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 250px;
+}
+
+.box1, .box2, .box3 {
+    width: 250px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-weight: normal;
+    padding: 20px;
+    text-align: center;
+}
+
+.box1 {
+    background: linear-gradient(45deg, #F9C5C5, #E88D8D);
+}
+
+.box2 {
+    background: linear-gradient(45deg, #95DF7A, #5CAF50);
+}
+.box3 {
+    background: linear-gradient(45deg, #A0C4FF, #5B92E5);
+}
+
+.value {
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+
+.company-name {
+position: absolute;
+right: 120px;
+font-size: 18px;
+font-weight: bold;
 }

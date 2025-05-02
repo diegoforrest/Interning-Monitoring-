@@ -75,38 +75,43 @@ $present_interns = $row_present['present_interns'] ?? 0;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="css/CompanyDashboard.css">
+    <link rel="stylesheet" href="css/CompanyDash.css">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Internship Monitoring System</title>
 
 </head>
 <body>
 
-    <!-- Header -->
-    <div class="header">
-    <!-- Display Logged-in Company Name -->
+<nav>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="display: flex; align-items: center; margin-top: 10px;">
+                <a href="CompanyDashboard.php" class="logo-link" style="display: flex; align-items: center; text-decoration: none;">
+                    <img src="image/icon-72.png" class="logo-img" style="max-height: 51px; margin-right: 10px;" />
+                    <span class="logo-text" style="font-family: 'Robotolightnew', sans-serif; line-height: 1.2; text-align: left; font-size: 20px;">
+                        Internship<br>Monitoring System
+                    </span>
+                </a>
+            </li>
+            <li style="margin-top: 25px; margin-left: 20px; font-family: 'Robotolightnew', sans-serif; font-size: 18px;">
+                <a href="CompanyInterns.php" style="text-decoration: none;">Company Interns</a>
+            </li>
+            <li style="margin-top: 25px; margin-left: 20px; font-family: 'Robotolightnew', sans-serif; font-size: 18px;">
+                <a href="CompanyReport.php" style="text-decoration: none;">Company Reports</a>  <!-- Change report.php or report2.php -->
+            </li>
+
+            <div class="btn">
+            <a href="logout.php" style="text-decoration: none; font-family: 'Robotolightnew', sans-serif;  color: white; font-weight: bold;">Log Out </a>
+         </div>
+        </ul>
+    </nav>
+    
     <div class="company-name">
-        Logged in as: <?php echo htmlspecialchars($company_name); ?>
-    </div>
-
-    <!-- Logout Button -->
-    <div class="logout-container">
-        <a href="logout.php">Log Out</a>
-    </div>
-
-    <!-- Logo -->
-    <div class="logo-container">
-        <img src="image/favicon.png" alt="logo" width="50" />
-        <div class="logo">Internship Monitoring System</div>
-    </div>
-</div>
-
-
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <a href="CompanyDashboard.php">Dashboard</a>
-        <a href="CompanyInterns.php">Interns</a>
-        <a href="CompanyReport.php">Reports</a>
-    </div>
+            Logged in as: <?php echo htmlspecialchars($company_name); ?>
+            </div>
 
     <!-- Rendered Hours & Remaining Hours Section -->
     <div class="container">
